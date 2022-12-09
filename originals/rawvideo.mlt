@@ -1,0 +1,127 @@
+<?xml version="1.0" standalone="no"?>
+<mlt LC_NUMERIC="C" version="7.9.0" title="Shotcut version 22.10.25" producer="main_bin">
+  <profile description="automatic" width="1280" height="720" progressive="1" sample_aspect_num="1" sample_aspect_den="1" display_aspect_num="16" display_aspect_den="9" frame_rate_num="30000" frame_rate_den="1001" colorspace="709"/>
+  <chain id="chain0" out="00:04:39.373">
+    <property name="length">00:04:39.406</property>
+    <property name="eof">pause</property>
+    <property name="resource">resp.mp4</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="seekable">1</property>
+    <property name="audio_index">1</property>
+    <property name="video_index">0</property>
+    <property name="mute_on_pause">0</property>
+    <property name="creation_time">2022-04-28T22:56:38</property>
+    <property name="xml">was here</property>
+    <property name="shotcut:hash">58db46908ba1728aae5aba0cde99b153</property>
+  </chain>
+  <chain id="chain1" out="00:02:22.756">
+    <property name="length">00:02:22.789</property>
+    <property name="eof">pause</property>
+    <property name="resource">responsible.mp4</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="seekable">1</property>
+    <property name="audio_index">1</property>
+    <property name="video_index">0</property>
+    <property name="mute_on_pause">0</property>
+    <property name="creation_time">2022-01-30T16:59:55</property>
+    <property name="xml">was here</property>
+    <property name="shotcut:hash">74ccfb1303c88f365823940cb730474b</property>
+  </chain>
+  <playlist id="main_bin">
+    <property name="xml_retain">1</property>
+    <entry producer="chain0" in="00:00:00.000" out="00:04:39.373"/>
+    <entry producer="chain1" in="00:00:00.000" out="00:02:22.756"/>
+  </playlist>
+  <producer id="black" in="00:00:00.000" out="00:00:18.318">
+    <property name="length">00:00:18.352</property>
+    <property name="eof">pause</property>
+    <property name="resource">0</property>
+    <property name="aspect_ratio">1</property>
+    <property name="mlt_service">color</property>
+    <property name="mlt_image_format">rgba</property>
+    <property name="set.test_audio">0</property>
+  </producer>
+  <playlist id="background">
+    <entry producer="black" in="00:00:00.000" out="00:00:18.318"/>
+  </playlist>
+  <chain id="chain2" out="00:02:22.756">
+    <property name="length">00:02:22.789</property>
+    <property name="eof">pause</property>
+    <property name="resource">responsible.mp4</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="seekable">1</property>
+    <property name="audio_index">1</property>
+    <property name="video_index">0</property>
+    <property name="mute_on_pause">0</property>
+    <property name="creation_time">2022-01-30T16:59:55</property>
+    <property name="xml">was here</property>
+    <property name="shotcut:hash">74ccfb1303c88f365823940cb730474b</property>
+    <property name="shotcut:caption">responsible.mp4</property>
+    <filter id="filter0" in="00:01:10.978" out="00:01:13.380">
+      <property name="start">1</property>
+      <property name="level">00:00:01.435=1;00:00:02.402=0</property>
+      <property name="mlt_service">brightness</property>
+      <property name="shotcut:filter">fadeOutBrightness</property>
+      <property name="alpha">1</property>
+      <property name="shotcut:animOut">00:00:01.001</property>
+    </filter>
+  </chain>
+  <chain id="chain3" out="00:04:39.373">
+    <property name="length">00:04:39.406</property>
+    <property name="eof">pause</property>
+    <property name="resource">resp.mp4</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="seekable">1</property>
+    <property name="audio_index">1</property>
+    <property name="video_index">0</property>
+    <property name="mute_on_pause">0</property>
+    <property name="creation_time">2022-04-28T22:56:38</property>
+    <property name="xml">was here</property>
+    <property name="shotcut:hash">58db46908ba1728aae5aba0cde99b153</property>
+    <property name="shotcut:caption">resp.mp4</property>
+    <filter id="filter1" in="00:04:17.284" out="00:04:33.166">
+      <property name="start">1</property>
+      <property name="level">00:00:14.915=1;00:00:15.883=0</property>
+      <property name="mlt_service">brightness</property>
+      <property name="shotcut:filter">fadeOutBrightness</property>
+      <property name="alpha">1</property>
+      <property name="shotcut:animOut">00:00:01.001</property>
+    </filter>
+    <filter id="filter2" in="00:04:17.284" out="00:04:33.166">
+      <property name="window">75</property>
+      <property name="max_gain">20dB</property>
+      <property name="level">00:00:14.915=0;00:00:15.883=-60</property>
+      <property name="mlt_service">volume</property>
+      <property name="shotcut:filter">fadeOutVolume</property>
+      <property name="shotcut:animOut">00:00:01.001</property>
+    </filter>
+  </chain>
+  <playlist id="playlist0">
+    <property name="shotcut:video">1</property>
+    <property name="shotcut:name">V1</property>
+    <entry producer="chain2" in="00:01:10.978" out="00:01:13.380"/>
+    <entry producer="chain3" in="00:04:17.284" out="00:04:33.166"/>
+  </playlist>
+  <tractor id="tractor0" title="Shotcut version 22.10.25" in="00:00:00.000" out="00:00:18.318">
+    <property name="shotcut">1</property>
+    <property name="shotcut:projectAudioChannels">2</property>
+    <property name="shotcut:projectFolder">0</property>
+    <track producer="background"/>
+    <track producer="playlist0"/>
+    <transition id="transition0">
+      <property name="a_track">0</property>
+      <property name="b_track">1</property>
+      <property name="mlt_service">mix</property>
+      <property name="always_active">1</property>
+      <property name="sum">1</property>
+    </transition>
+    <transition id="transition1">
+      <property name="a_track">0</property>
+      <property name="b_track">1</property>
+      <property name="version">0.1</property>
+      <property name="mlt_service">frei0r.cairoblend</property>
+      <property name="threads">0</property>
+      <property name="disable">1</property>
+    </transition>
+  </tractor>
+</mlt>
